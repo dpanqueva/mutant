@@ -1,7 +1,7 @@
 # Mutant
 ## _Proyecto para evaluar ADN humanos y determinar si son o no mutantes._
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)]()
+[![N|Solid](https://github.com/dpanqueva/mutant/blob/main/img/sombra.png)]()
 
 ## Instrucciones
 Recomendaciones a tener en cuenta:
