@@ -36,6 +36,9 @@ java -jar mutant-0.0.1-SNAPSHOT.jar
 ```
 Ya con esto nuestro proyecto ha quedado desplegado y listo para probar.
 
+[![N|Solid](https://github.com/dpanqueva/mutant/blob/main/img/despliegueJava.PNG)]()
+
+
 ## Ejecución
 Para la ejecución, en mi caso utilizare [Postman](https://www.postman.com/downloads/), ya en la herramienta debemos tener en cuenta los endposints:
 
@@ -76,6 +79,11 @@ Para la solución de este reto, se implemento:
 | Spring Boot | [https://start.spring.io/](https://start.spring.io/) |
 | H2 | [H2 Databse](https://mvnrepository.com/artifact/com.h2database/h2/1.4.200) |
 | PostgresSql | [H2 Databse](https://www.postgresql.org/download/) |
+| Junit5 | [Junit](https://junit.org/junit5/) |
+
+## Pruebas unitarias
+Coverages en el 80% de la ejecución de las pruebas.
+[![N|Solid](https://github.com/dpanqueva/mutant/blob/main/img/coverage.PNG)]()
 
 ## Gracias!!
 
