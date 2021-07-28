@@ -42,10 +42,16 @@ Ya con esto nuestro proyecto ha quedado desplegado y listo para probar.
 ## Ejecución
 Para la ejecución, en mi caso utilizare [Postman](https://www.postman.com/downloads/), ya en la herramienta debemos tener en cuenta los endposints:
 
+> Tener en cuenta el ambiente al cual se le va a realizar la prueba
+> localhost-> maquina de desarrollo
+> https://meli-test-mutant.herokuapp.com/ -> es la maquina cloud donde se encuentra el despliegue
+
 | Operacion | Endpoint |
 | ------ | ------ |
 | GET | [localhost:8005/api/V1/stats][PlDb] |
 | POST | [localhost:8005/api/V1/mutant][PlGh] |
+| GET | [https://meli-test-mutant.herokuapp.com/api/V1/stats][PlDb] |
+| POST | [https://meli-test-mutant.herokuapp.com/api/V1/mutant][PlGh] |
 
 para la operación POST el cuerpo del consumo es:
 > {
@@ -84,6 +90,27 @@ Para la solución de este reto, se implemento:
 ## Pruebas unitarias
 Coverages en el 80% de la ejecución de las pruebas.
 [![N|Solid](https://github.com/dpanqueva/mutant/blob/main/img/coverage.PNG)]()
+
+## Despliegue cloud
+Se realiza en [Heroku](https://dashboard.heroku.com/apps), con una base de datos postgresql (La cual es suministrada por heroku identificando el pom.xml en la construcción del despliegue).
+
+```sh
+cd carpeta-proyecto
+heroku login
+git init
+git status
+git add .
+git commit -m "primer commit"
+heroku apps:create meli-test-mutant
+git push heroku master
+heroku open
+```
+> Tener en cuenta que para java 11 es necesrio crear un archivo en la raiz del > proyecto system.properties para especificar que heroku debe trabajar con 
+> java 11. Allí se especifica la siguiente propiedad:
+
+```sh
+java.runtime.version=11
+```
 
 ## Gracias!!
 
