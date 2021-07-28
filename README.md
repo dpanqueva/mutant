@@ -46,9 +46,6 @@ Ya con esto nuestro proyecto ha quedado desplegado y listo para probar.
 Para la ejecución, en mi caso utilizare [Postman](https://www.postman.com/downloads/), ya en la herramienta debemos tener en cuenta los endposints:
 
 > Tener en cuenta el ambiente al cual se le va a realizar la prueba
-> localhost: maquina de desarrollo
-> https://meli-test-mutant.herokuapp.com/ -> es la maquina cloud donde se encuentra 
-> el despliegue
 
 | Operacion | Endpoint |
 | ------ | ------ |
