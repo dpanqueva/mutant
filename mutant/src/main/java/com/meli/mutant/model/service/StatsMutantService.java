@@ -1,13 +1,10 @@
 package com.meli.mutant.model.service;
 
 import com.meli.mutant.model.dto.StatsDTO;
-import com.meli.mutant.model.entity.StatsEntity;
 import com.meli.mutant.model.repository.IDNAStatsMutantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 @Service
 @Transactional

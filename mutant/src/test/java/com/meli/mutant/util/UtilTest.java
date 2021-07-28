@@ -18,7 +18,7 @@ import com.meli.mutant.model.dto.ResponseDTO;
 
 @ExtendWith(MockitoExtension.class)
 @RunWith(MockitoJUnitRunner.class)
-public class UtilTest {
+class UtilTest {
 
 	@InjectMocks
 	private DNAUtil dnaUtil;
@@ -30,7 +30,7 @@ public class UtilTest {
 	private ResponseDTO responseBR;
 
 	@BeforeEach
-	public void buildObject() {
+	void buildObject() {
 		ModelDna modelDna = new ModelDna();
 		dnaDto = modelDna.createDTODNAOpc();
 		dnaDtoFailed = modelDna.createDTODNAFailed();
@@ -40,25 +40,25 @@ public class UtilTest {
 	}
 
 	@Test
-	public void mutantCaseOk() {
+	void mutantCaseOk() {
 		assertTrue(dnaUtil.evaluationProcess(dnaDto));
 	}
 
 	@Test
-	public void analyzeADN() {
+	void analyzeADN() {
 		boolean res = dnaUtil.evaluationProcess(dnaDtoFailed);
 		assertFalse(res);
 	}
 
 	@Test
-	public void matrixEval() {
+	void matrixEval() {
 		ResponseDTO response = null;
 		try {
 			dnaUtil.evaluationProcess(dnaDtoDiff);
 		} catch (Exception e) {
 			response = responseBR;
 		}
-		assertEquals(response.getCode(), 400);
+		assertEquals(400,response.getCode() );
 	}
 
 }

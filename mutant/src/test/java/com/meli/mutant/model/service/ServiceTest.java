@@ -86,7 +86,7 @@ class ServiceTest {
 			responseDTO = responseFail;
 		}
 
-		assertEquals(responseDTO.getCode(), 200);
+		assertEquals(200, responseDTO.getCode());
 	}
 
 	@Test
@@ -98,7 +98,7 @@ class ServiceTest {
 		} catch (Exception e) {
 			responseDTO = responseFail;
 		}
-		assertEquals(responseDTO.getCode(), 403);
+		assertEquals(403, responseDTO.getCode());
 	}
 	
 
@@ -108,7 +108,7 @@ class ServiceTest {
 	@Test
 	void statsTest() {
 		when(adnStatsMutantRepository.findAll()).thenReturn(lstStats);
-		assertEquals(statsMutantService.stats().getCountHumanDNA(), 0);
+		assertEquals( 0,statsMutantService.stats().getCountHumanDNA());
 	}
 
 	@Test
