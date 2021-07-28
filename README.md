@@ -21,7 +21,10 @@ cd carpeta-proyecto
 git clone https://github.com/dpanqueva/mutant.git
 ```
 
-Una vez descargo el proyecto es necesario descargar los paquetes necesarios para su correcto funcionamiento.
+Una vez descargo el proyecto por favor ingresar a la carpeta 
+> mutant
+
+una vez allí en la carpeta, es necesario descargar los paquetes necesarios para su correcto funcionamiento.
 Para este proceso seguimos el siguiente comando:
 
 ```sh
