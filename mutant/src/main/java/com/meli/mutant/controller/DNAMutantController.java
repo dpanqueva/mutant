@@ -17,7 +17,10 @@ import com.meli.mutant.model.dto.DNADto;
 import com.meli.mutant.model.dto.ResponseDTO;
 import com.meli.mutant.model.service.IDNAMutantService;
 
-
+/**
+ * @author dpanquev
+ * @version 2021-07-28
+ * */
 @RestController
 @RequestMapping(("/api/V1"))
 public class DNAMutantController {
@@ -25,6 +28,12 @@ public class DNAMutantController {
     @Autowired
     private IDNAMutantService adnMutantService;
 
+    /**
+     * Base class for job with the mutant dna
+     * @param adnMutantDTO
+     * @param result
+     * @return
+     * */
     @PostMapping("/mutant")
     public ResponseEntity<ResponseDTO> mutant(@RequestBody DNADto adnMutantDTO, BindingResult result) {
         if (result.hasErrors()) {

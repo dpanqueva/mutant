@@ -15,6 +15,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
+/**
+ * @author dpanquev
+ * @version 2021-07-28
+ * */
 @Service
 @Transactional(noRollbackFor = {ForbiddenException.class})
 public class DNAMutantServiceImpl implements IDNAMutantService {
@@ -27,6 +31,11 @@ public class DNAMutantServiceImpl implements IDNAMutantService {
     @Autowired
     private DNAUtil dnaVerifyUtil;
 
+    /**
+     * Method to analyze mutant DNA
+     * @param  adnMutant
+     * @return
+     * */
     @Override
     public ResponseDTO isMutant(DNADto adnMutant) {
         if (dnaMutantRepository.findByAdnMutant(adnMutant.toString()) == null) {
@@ -45,6 +54,12 @@ public class DNAMutantServiceImpl implements IDNAMutantService {
                 , "Successfully evaluated DNA");
     }
 
+    /**
+     * method to save the analyze mutant DNA
+     * @param adnMutant
+     * @param isMutant
+     * @return
+     * */
     void saveHumanMutant(DNADto adnMutant, boolean isMutant) {
         try {
             DNAEntity dnaEntity = new DNAEntity(adnMutant);
@@ -53,7 +68,6 @@ public class DNAMutantServiceImpl implements IDNAMutantService {
         } catch (Exception ex) {
             logger.error(ex.getMessage());
         }
-
     }
 
 }

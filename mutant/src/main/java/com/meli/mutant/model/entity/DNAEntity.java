@@ -9,6 +9,11 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+
+/**
+ * @author dpanquev
+ * @version 2021-07-28
+ * */
 @Setter
 @Getter
 @AllArgsConstructor

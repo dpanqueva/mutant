@@ -7,6 +7,11 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
+
+/**
+ * @author dpanquev
+ * @version 2021-07-28
+ * */
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter

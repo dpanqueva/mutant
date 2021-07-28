@@ -1,5 +1,9 @@
 package com.meli.mutant.exception;
 
+/**
+ * @author dpanquev
+ * @version 2021-07-28
+ * */
 public class BadRequestException extends RuntimeException {
 
     /**

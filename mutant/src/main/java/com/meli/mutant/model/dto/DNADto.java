@@ -12,6 +12,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
+
+/**
+ * @author dpanquev
+ * @version 2021-07-28
+ * */
 @Setter
 @Getter
 @AllArgsConstructor

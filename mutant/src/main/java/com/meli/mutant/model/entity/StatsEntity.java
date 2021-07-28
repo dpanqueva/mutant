@@ -8,6 +8,11 @@ import org.hibernate.annotations.Subselect;
 
 import javax.persistence.*;
 
+
+/**
+ * @author dpanquev
+ * @version 2021-07-28
+ * */
 @Entity
 @Getter
 @Setter

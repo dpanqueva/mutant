@@ -15,11 +15,21 @@ import org.springframework.stereotype.Component;
 import com.meli.mutant.exception.BadRequestException;
 import com.meli.mutant.model.dto.DNADto;
 
+/**
+ * @author dpanquev
+ * @version 2021-07-28
+ * */
 @Component
 public class DNAUtil {
 
 	private final Logger logger = LoggerFactory.getLogger(DNAUtil.class);
 
+	private int cont = 0;
+
+	/**
+	 * Method to load initial mutant configuration
+	 * @return
+	 * */
 	private List<String> initConf() {
 		List<String> lstConf = new ArrayList<>();
 		lstConf.add("AAAA");
@@ -29,8 +39,12 @@ public class DNAUtil {
 		return lstConf;
 	}
 
-	private int cont = 0;
 
+	/**
+	 * Method to construct dna matrix to evaluate process
+	 * @param adnMutant
+	 * @return
+	 * */
 	public boolean evaluationProcess(DNADto adnMutant) {
 		StringBuilder strStructureDNA = new StringBuilder();
 		int vectorLength = adnMutant.getDna().size();
@@ -45,6 +59,12 @@ public class DNAUtil {
 				verticalEvaluate(dna, horizontalEvaluate(dna, diagonalEvaluate(dna, strStructureDNA))).toString());
 	}
 
+	/**
+	 * Method to analyze diagonal
+	 * @param dna
+	 * @param strStructureDNA
+	 * @return
+	 * */
 	private StringBuilder diagonalEvaluate(char[][] dna, StringBuilder strStructureDNA) {
 		for (int i = 0; i < dna.length; i++) {
 			strStructureDNA.append(dna[i][i]);
@@ -53,6 +73,12 @@ public class DNAUtil {
 		return strStructureDNA;
 	}
 
+	/**
+	 * Method to analyze horizontal
+	 * @param dna
+	 * @param strStructureDNA
+	 * @return
+	 * */
 	private StringBuilder horizontalEvaluate(char[][] dna, StringBuilder strStructureDNA) {
 		for (char[] chars : dna) {
 			for (int j = 0; j < dna.length; j++) {
@@ -63,6 +89,12 @@ public class DNAUtil {
 		return strStructureDNA;
 	}
 
+	/**
+	 * Method to analyze vertical
+	 * @param dna
+	 * @param strStructureDNA
+	 * @return
+	 * */
 	private StringBuilder verticalEvaluate(char[][] dna, StringBuilder strStructureDNA) {
 		for (int i = 0; i < dna.length; i++)
 			for (char[] chars : dna) {
@@ -71,6 +103,12 @@ public class DNAUtil {
 		return strStructureDNA;
 	}
 
+	/**
+	 * Method to analyze size Matrix
+	 * @param vectorLength
+	 * @param dnaRow
+	 * @return
+	 * */
 	private void sizeMyMatrix(int vectorLength, String dnaRow) {
 		if (dnaRow.length() != vectorLength) {
 			logger.error("Size does not correspond to the matrix");
@@ -78,6 +116,11 @@ public class DNAUtil {
 		}
 	}
 
+	/**
+	 * Method to analyze dna
+	 * @param dna
+	 * @return
+	 * */
 	private boolean analyzeADN(String dna) {
 		List<String> lstDg = Arrays.asList(dna.split(","));
 		lstDg.forEach(dnaV -> initConf().stream().filter(adn -> dnaV.indexOf(adn) > -1).forEach(adn -> cont++));
@@ -89,6 +132,11 @@ public class DNAUtil {
 		return false;
 	}
 
+	/**
+	 * Method to get the current date
+	 * @param format
+	 * @return
+	 * */
 	public static String actualDate(String format) {
 		Instant timestamp = Instant.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format)

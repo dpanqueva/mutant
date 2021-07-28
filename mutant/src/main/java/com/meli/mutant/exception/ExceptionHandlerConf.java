@@ -1,6 +1,10 @@
 package com.meli.mutant.exception;
 
 
+/**
+ * @author dpanquev
+ * @version 2021-07-28
+ * */
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
