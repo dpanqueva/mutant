@@ -48,10 +48,10 @@ Para la ejecución, en mi caso utilizare [Postman](https://www.postman.com/downl
 
 | Operacion | Endpoint |
 | ------ | ------ |
-| GET | [localhost:8005/api/V1/stats][PlDb] |
-| POST | [localhost:8005/api/V1/mutant][PlGh] |
-| GET | [https://meli-test-mutant.herokuapp.com/api/V1/stats][PlDb] |
-| POST | [https://meli-test-mutant.herokuapp.com/api/V1/mutant][PlGh] |
+| GET | [localhost:8005/api/V1/stats] |
+| POST | [localhost:8005/api/V1/mutant] |
+| GET | [https://meli-test-mutant.herokuapp.com/api/V1/stats] |
+| POST | [https://meli-test-mutant.herokuapp.com/api/V1/mutant] |
 
 para la operación POST el cuerpo del consumo es:
 > {
