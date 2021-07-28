@@ -94,6 +94,13 @@ Para la solución de este reto, se implemento:
 Coverages en el 80% de la ejecución de las pruebas.
 [![N|Solid](https://github.com/dpanqueva/mutant/blob/main/img/coverage.PNG)]()
 
+## SonarQube
+Código limpio de acuerdo al análisis de [SonarQube](https://www.sonarqube.org/)
+```sh
+mvn sonar:sonar -Dsonar.projectKey=mutant -Dsonar.host.url=http://localhost:9000 -Dsonar.login=311c3ec79d0f94c616f7c924ed883c06eb178c29
+```
+[![N|Solid](https://github.com/dpanqueva/mutant/blob/main/img/sonarqubeCorreccion.PNG)]()
+
 ## Despliegue cloud
 Se realiza en [Heroku](https://dashboard.heroku.com/apps), con una base de datos postgresql (La cual es suministrada por heroku identificando el pom.xml en la construcción del despliegue).
 
