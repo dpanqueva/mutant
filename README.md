@@ -12,6 +12,22 @@ Recomendaciones a tener en cuenta:
 
 ## Instalación
 
+Cree la base de datos:
+```sh
+create database meli;
+```
+
+Una vez dentro de la base de datos debemos crear la tabla o dejar que el ms al desplegar la cree.
+Aquí el ejemplo:
+
+```sh
+create table tbl_adn (
+id serial PRIMARY KEY,
+adnMutant varchar(255),
+sn_mutant BOOLEAN 
+);
+```
+
 Descargue el proyecto del repositorio [GitHub](https://github.com/dpanqueva/mutant).
 
 Siguiendo el comando:
@@ -74,6 +90,25 @@ Respuesta 403 (no mutante):
 >    "dateAt": "2021-07-27 15:23:48",
 >    "message": "The evaluated dna belongs to a human"
 > }
+
+## Curl
+
+Metodo de envio POST, para analizar un ADN
+
+```sh
+curl --location --request POST 'https://meli-test-mutant.herokuapp.com/api/V1/mutant' \
+ --header 'Content-Type: application/json' \
+ --data-raw '{
+ "dna":["TTGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
+ }'
+```
+
+Metodo de envio GET, para obtener estadisticas
+```sh 
+curl --location --request GET 'https://meli-test-mutant.herokuapp.com/api/V1/stats'
+```
+
+> Cuando se descargue la prueba, en la carpeta img se encuentra el proyecto postman [Proyecto-postman]()
 
 ## Tech
 Para la solución de este reto, se implemento:
