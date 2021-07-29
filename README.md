@@ -23,7 +23,7 @@ Aquí el ejemplo:
 ```sh
 create table tbl_adn (
 id serial PRIMARY KEY,
-adnMutant varchar(255),
+adn_mutant varchar(255),
 sn_mutant BOOLEAN 
 );
 ```
