@@ -108,7 +108,7 @@ Metodo de envio GET, para obtener estadisticas
 curl --location --request GET 'https://meli-test-mutant.herokuapp.com/api/V1/stats'
 ```
 
-> Cuando se descargue la prueba, en la carpeta img se encuentra el proyecto postman [Proyecto-postman]()
+> Cuando se descargue la prueba, en la carpeta img se encuentra el proyecto postman [Proyecto-postman](https://github.com/dpanqueva/mutant/tree/main/img)
 
 ## Tech
 Para la solución de este reto, se implemento:
